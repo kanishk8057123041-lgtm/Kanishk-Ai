@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanishk's AI Chat</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+        .chat-container { max-width: 600px; margin: auto; }
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Kanishk's AI Chat</h1>
+    <div class="chat-container">
+        <div id="chat"></div>
+        <input id="userInput" type="text" placeholder="Type a message..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <h2>About Kanishk</h2>
+    <p>Kanishk is an AI enthusiast and developer from [Location].</p>
+    
+    <h2>Watch this YouTube video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/[VIDEO_ID]" frameborder="0" allowfullscreen></iframe>
+
+    <script>
+        function sendMessage() {
+            const message = document.getElementById('userInput').value;
+            const chat = document.getElementById('chat');
+            chat.innerHTML += `<div>User: ${message}</div>`;
+            document.getElementById('userInput').value = '';
+        }
+    </script>
+</body>
+</html>
